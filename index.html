@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> <!--ligação para css-->
+
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <h1 class="name">Cláudio Monteiro</h1> <!--h1 tag semântica para título mais importante-->
+            <nav> <!--Links que ajudam o utilizador a navegar no site devem estar dentro do nav(se tivesse uma searchbar tmb poderia incluir)-->
+                <a href="#">Work</a>  <!-- <a> tag semântica para hyperlink, meter link no #. Faz com que tenha comportamente de um link por defeito -->
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="socials"> <!--Links externos não fazem sentido estar no nav-->
+                <a href="#">LinkedIn</a>  
+                <a href="#">GitHub</a>
+                <a href="#">Dribble</a>
+            </div>
+        </aside>
+        
+        <main class="content">
+            <section class="hero">
+                <div class="hero-text">
+                    <h2>JavaScript and ServiceNow developer</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at sapien orci. Vestibulum eu tempus risus.
+                    </p>
+                    <div class="buttons">
+                        <button>View Portfolio</button>
+                        <button class="secondary">Download CV</button>
+                    </div>        
+                </div>
+                <img src="imgs/fotocv.jpg" alt="Profile photo">   <!-- tag img para colocar imagem, exportada localmente neste caso-->     
+            </section>
+
+            <section class="cards">
+                <div class="card">
+                    <h3>ServiceNow</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at sapien orci. Vestibulum eu tempus risus.</p>
+                </div>
+
+                <div class="card">
+                    <h3>JavaScript, HTML and CSS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at sapien orci. Vestibulum eu tempus risus.</p>
+                </div>
+
+                <div class="card">
+                    <h3>SQL</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at sapien orci. Vestibulum eu tempus risus.</p>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+    
+</body>
+</html>

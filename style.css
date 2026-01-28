@@ -1,0 +1,12 @@
+* {  /*para afetar todos os elementos no que toca ás margens e padding (atributos não herdados)*/
+    box-sizing: border-box; /*todos os elementos individuais usam border-box, por defeito usam content-box*/
+    font-family: Arial, sans-serif;
+    margin: 0;  /*reset, pois certos elementos vêm com margens e padding pré-definidos, exemplo body margin: 8px    */
+    padding: 0;
+
+}
+
+body {
+    background: #f4f7fb;
+}
+
