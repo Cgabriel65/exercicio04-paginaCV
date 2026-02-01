@@ -1,6 +1,5 @@
 * {  /*para afetar todos os elementos no que toca ás margens e padding (atributos não herdados)*/
     box-sizing: border-box; /*todos os elementos individuais usam border-box, por defeito usam content-box*/
-    font-family: Arial, sans-serif;
     margin: 0;  /*reset, pois certos elementos vêm com margens e padding pré-definidos, exemplo body margin: 8px    */
     padding: 0;
 
@@ -8,6 +7,29 @@
 
 body {
     background: #f4f7fb;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555;
+}
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.4;
+    color:#a76f1b;
+    margin-bottom: 30px;
+    
+    
+
+}
+
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #a76f1b;
+
 }
 
 
@@ -23,11 +45,21 @@ body {
     background: #fff;
     padding: 30px;
     border-right: 1px solid #eee; 
+    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}     
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
+
 .sidebar nav a {
-    display: block; /*cada elemento <a> do nav, ocupa uma linha inteira, permite margem vertical, e área de click maior*/
-    margin: 15px 0px; /*15 px para cima e para baixo, 0 à esquerda e à direita*/
     color: #555;  
     text-decoration: none; /*tira sublinhados*/
 
@@ -37,15 +69,40 @@ body {
     color: #000;
 }
 
+.socials {
+    display: flex;
+    margin-top: auto; /*faz com que socials ficam no fundo da sidebar*/
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;   
+}
+
+.socials a {
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+
+
+}
+
+
+.socials a:hover {
+    color: #000;
+}
+
 
 /*Conteúdo Principal*/
 .content {
     flex: 1; /*main ocupa restante do espaço deixado pelo tamanho fixo da side bar*/
     padding: 40px;
+    
+
 }
 
 
-.hero{
+.hero {
     background: #fff;
     padding: 40px;
     border-radius: 12px; /*margens arredondadas*/
@@ -58,29 +115,81 @@ body {
     
 }
 
+.hero h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
 .hero-text {
     flex: 1;
+    margin: 10px;
+    padding: 10px;
+    
 
 }
 
 .hero img {
-    width: 200px;
-    border-radius: 12px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /*transforma imagem em círculo*/
+    object-fit: cover; 
+    
+    
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /*sombreado foto*/
+
+
 
 }
 
-.buttons button {
+
+.buttons { /*layout dos botoes*/
+    display: flex;
+    gap: 10px; /*posso controlar gap devido ao flex, em vez de usar margin right*/
+    margin-top: 20px;
+}
+
+
+.btn { 
     padding: 10px 16px; /*10px vertical 16px horizontal*/
-    margin-right: 10px;
     border-radius: 6px;
-    border: none; /*sem isto butão fica com margem preta*/
-    cursor: pointer; /*qd se dá hover com rato, fica com cursor diferente, como nos hyperlinks*/
-}
+    cursor: pointer;
+    text-decoration: none;
+    color: #555;
+    /*font-weight: 600;  /*negrito*/ */
 
-.secondary {
+    
+   
+
+} 
+
+.btn.primary {
+    border: none;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    text-decoration-color:#ddd;
+
+    
+    
+    
+}
+.btn.secondary {
     background: #fff;
     border: 1px solid #ddd;
 }
+
+
+.btn:hover {     /* Pseudo-classe hover para quando curso passa sobre botão */
+    background: #f4f7fb;
+}
+
+.btn:active {   /* Pseudo-casse active, efeito para quando botão é clicado  */ 
+    transform: translateY(1px); /* botão move 1px para baixo */
+    
+} 
+
+
 
 .cards {
     display: flex; /*mais um container para organizar em linha os cards em baixo*/
